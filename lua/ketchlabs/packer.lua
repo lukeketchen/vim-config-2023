@@ -138,11 +138,42 @@ use({
     end,
   })
 
-  -- use({ 'rose-pine/neovim', as = 'rose-pine' })
+  -- Git integration.
+  use({
+    'lewis6991/gitsigns.nvim',
+    config = function()
+      require('gitsigns').setup({
+        signs = {
+          add = { text = '⢕' },
+          change = { text = '⢕' },
+        },
+      })
+      vim.keymap.set('n', ']h', ':Gitsigns next_hunk<CR>')
+      vim.keymap.set('n', '[h', ':Gitsigns prev_hunk<CR>')
+      vim.keymap.set('n', 'gs', ':Gitsigns stage_hunk<CR>')
+      vim.keymap.set('n', 'gS', ':Gitsigns undo_stage_hunk<CR>')
+      vim.keymap.set('n', 'gp', ':Gitsigns preview_hunk<CR>')
+      vim.keymap.set('n', 'gb', ':Gitsigns blame_line<CR>')
+    end,
+  })
+
+  --- Floating terminal.
+use({
+  'voldikss/vim-floaterm',
+  config = function()
+    require('ketchlabs/plugins/floaterm')
+  end
+})
+
+  -- Git commands.
+use({
+  'tpope/vim-fugitive',
+  requires = 'tpope/vim-rhubarb',
+})
+
   use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})  
   use('theprimeagen/harpoon')
   use('mbbill/undotree')
-  use('tpope/vim-fugitive')
 
   use {
     'VonHeikemen/lsp-zero.nvim',

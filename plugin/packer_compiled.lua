@@ -98,6 +98,12 @@ _G.packer_plugins = {
     path = "/Users/lukeketchen/.local/share/nvim/site/pack/packer/start/dashboard-nvim",
     url = "https://github.com/glepnir/dashboard-nvim"
   },
+  ["gitsigns.nvim"] = {
+    config = { "\27LJ\2\nç\3\0\0\5\0\26\00076\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\b\0005\3\4\0005\4\3\0=\4\5\0035\4\6\0=\4\a\3=\3\t\2B\0\2\0016\0\n\0009\0\v\0009\0\f\0'\2\r\0'\3\14\0'\4\15\0B\0\4\0016\0\n\0009\0\v\0009\0\f\0'\2\r\0'\3\16\0'\4\17\0B\0\4\0016\0\n\0009\0\v\0009\0\f\0'\2\r\0'\3\18\0'\4\19\0B\0\4\0016\0\n\0009\0\v\0009\0\f\0'\2\r\0'\3\20\0'\4\21\0B\0\4\0016\0\n\0009\0\v\0009\0\f\0'\2\r\0'\3\22\0'\4\23\0B\0\4\0016\0\n\0009\0\v\0009\0\f\0'\2\r\0'\3\24\0'\4\25\0B\0\4\1K\0\1\0\29:Gitsigns blame_line<CR>\agb\31:Gitsigns preview_hunk<CR>\agp\":Gitsigns undo_stage_hunk<CR>\agS\29:Gitsigns stage_hunk<CR>\ags\28:Gitsigns prev_hunk<CR>\a[h\28:Gitsigns next_hunk<CR>\a]h\6n\bset\vkeymap\bvim\nsigns\1\0\0\vchange\1\0\1\ttext\bâ¢•\badd\1\0\0\1\0\1\ttext\bâ¢•\nsetup\rgitsigns\frequire\0" },
+    loaded = true,
+    path = "/Users/lukeketchen/.local/share/nvim/site/pack/packer/start/gitsigns.nvim",
+    url = "https://github.com/lewis6991/gitsigns.nvim"
+  },
   harpoon = {
     loaded = true,
     path = "/Users/lukeketchen/.local/share/nvim/site/pack/packer/start/harpoon",
@@ -210,6 +216,12 @@ _G.packer_plugins = {
     path = "/Users/lukeketchen/.local/share/nvim/site/pack/packer/start/vim-eunuch",
     url = "https://github.com/tpope/vim-eunuch"
   },
+  ["vim-floaterm"] = {
+    config = { "\27LJ\2\n:\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\31ketchlabs/plugins/floaterm\frequire\0" },
+    loaded = true,
+    path = "/Users/lukeketchen/.local/share/nvim/site/pack/packer/start/vim-floaterm",
+    url = "https://github.com/voldikss/vim-floaterm"
+  },
   ["vim-fugitive"] = {
     loaded = true,
     path = "/Users/lukeketchen/.local/share/nvim/site/pack/packer/start/vim-fugitive",
@@ -235,6 +247,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/lukeketchen/.local/share/nvim/site/pack/packer/start/vim-repeat",
     url = "https://github.com/tpope/vim-repeat"
+  },
+  ["vim-rhubarb"] = {
+    loaded = true,
+    path = "/Users/lukeketchen/.local/share/nvim/site/pack/packer/start/vim-rhubarb",
+    url = "https://github.com/tpope/vim-rhubarb"
   },
   ["vim-rooter"] = {
     config = { "\27LJ\2\n*\0\0\3\0\3\0\0056\0\0\0009\0\1\0'\2\2\0B\0\2\1K\0\1\0\vRooter\bcmd\bvim\0" },
@@ -282,6 +299,22 @@ time([[packadd for vim-rooter]], false)
 time([[Config for vim-pasta]], true)
 try_loadstring("\27LJ\2\nG\0\0\2\0\4\0\0056\0\0\0009\0\1\0005\1\3\0=\1\2\0K\0\1\0\1\2\0\0\rfugitive\29pasta_disabled_filetypes\6g\bvim\0", "config", "vim-pasta")
 time([[Config for vim-pasta]], false)
+-- Config for: nvim-tree.lua
+time([[Config for nvim-tree.lua]], true)
+try_loadstring("\27LJ\2\n;\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0 ketchlabs/plugins/nvim-tree\frequire\0", "config", "nvim-tree.lua")
+time([[Config for nvim-tree.lua]], false)
+-- Config for: vim-floaterm
+time([[Config for vim-floaterm]], true)
+try_loadstring("\27LJ\2\n:\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\31ketchlabs/plugins/floaterm\frequire\0", "config", "vim-floaterm")
+time([[Config for vim-floaterm]], false)
+-- Config for: onedark.vim
+time([[Config for onedark.vim]], true)
+try_loadstring("\27LJ\2\nû\1\0\0\t\0\14\0\0286\0\0\0009\0\1\0'\2\2\0B\0\2\0016\0\0\0009\0\3\0009\0\4\0)\2\0\0'\3\5\0005\4\t\0006\5\0\0009\5\3\0059\5\6\5'\a\a\0+\b\2\0B\5\3\0029\5\b\5=\5\n\0046\5\0\0009\5\3\0059\5\6\5'\a\v\0+\b\2\0B\5\3\0029\5\f\5=\5\r\4B\0\4\1K\0\1\0\abg\15background\15StatusLine\afg\1\0\0\15foreground\fNonText\24nvim_get_hl_by_name\22StatusLineNonText\16nvim_set_hl\bapi\24colorscheme onedark\bcmd\bvim\0", "config", "onedark.vim")
+time([[Config for onedark.vim]], false)
+-- Config for: vim-rooter
+time([[Config for vim-rooter]], true)
+try_loadstring("\27LJ\2\n*\0\0\3\0\3\0\0056\0\0\0009\0\1\0'\2\2\0B\0\2\1K\0\1\0\vRooter\bcmd\bvim\0", "config", "vim-rooter")
+time([[Config for vim-rooter]], false)
 -- Config for: nvim-autopairs
 time([[Config for nvim-autopairs]], true)
 try_loadstring("\27LJ\2\n<\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\19nvim-autopairs\frequire\0", "config", "nvim-autopairs")
@@ -290,26 +323,18 @@ time([[Config for nvim-autopairs]], false)
 time([[Config for vim-commentary]], true)
 try_loadstring("\27LJ\2\nZ\0\0\5\0\6\0\b6\0\0\0009\0\1\0009\0\2\0'\2\3\0'\3\4\0'\4\5\0B\0\4\1K\0\1\0!my<cmd>norm vip<bar>gc<cr>`y\tgcap\6n\bset\vkeymap\bvim\0", "config", "vim-commentary")
 time([[Config for vim-commentary]], false)
--- Config for: lualine.nvim
-time([[Config for lualine.nvim]], true)
-try_loadstring("\27LJ\2\n9\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\30ketchlabs/plugins/lualine\frequire\0", "config", "lualine.nvim")
-time([[Config for lualine.nvim]], false)
--- Config for: vim-rooter
-time([[Config for vim-rooter]], true)
-try_loadstring("\27LJ\2\n*\0\0\3\0\3\0\0056\0\0\0009\0\1\0'\2\2\0B\0\2\1K\0\1\0\vRooter\bcmd\bvim\0", "config", "vim-rooter")
-time([[Config for vim-rooter]], false)
--- Config for: onedark.vim
-time([[Config for onedark.vim]], true)
-try_loadstring("\27LJ\2\nû\1\0\0\t\0\14\0\0286\0\0\0009\0\1\0'\2\2\0B\0\2\0016\0\0\0009\0\3\0009\0\4\0)\2\0\0'\3\5\0005\4\t\0006\5\0\0009\5\3\0059\5\6\5'\a\a\0+\b\2\0B\5\3\0029\5\b\5=\5\n\0046\5\0\0009\5\3\0059\5\6\5'\a\v\0+\b\2\0B\5\3\0029\5\f\5=\5\r\4B\0\4\1K\0\1\0\abg\15background\15StatusLine\afg\1\0\0\15foreground\fNonText\24nvim_get_hl_by_name\22StatusLineNonText\16nvim_set_hl\bapi\24colorscheme onedark\bcmd\bvim\0", "config", "onedark.vim")
-time([[Config for onedark.vim]], false)
 -- Config for: dashboard-nvim
 time([[Config for dashboard-nvim]], true)
 try_loadstring("\27LJ\2\n@\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0%ketchlabs/plugins/dashboard-nvim\frequire\0", "config", "dashboard-nvim")
 time([[Config for dashboard-nvim]], false)
--- Config for: nvim-tree.lua
-time([[Config for nvim-tree.lua]], true)
-try_loadstring("\27LJ\2\n;\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0 ketchlabs/plugins/nvim-tree\frequire\0", "config", "nvim-tree.lua")
-time([[Config for nvim-tree.lua]], false)
+-- Config for: lualine.nvim
+time([[Config for lualine.nvim]], true)
+try_loadstring("\27LJ\2\n9\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\30ketchlabs/plugins/lualine\frequire\0", "config", "lualine.nvim")
+time([[Config for lualine.nvim]], false)
+-- Config for: gitsigns.nvim
+time([[Config for gitsigns.nvim]], true)
+try_loadstring("\27LJ\2\nç\3\0\0\5\0\26\00076\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\b\0005\3\4\0005\4\3\0=\4\5\0035\4\6\0=\4\a\3=\3\t\2B\0\2\0016\0\n\0009\0\v\0009\0\f\0'\2\r\0'\3\14\0'\4\15\0B\0\4\0016\0\n\0009\0\v\0009\0\f\0'\2\r\0'\3\16\0'\4\17\0B\0\4\0016\0\n\0009\0\v\0009\0\f\0'\2\r\0'\3\18\0'\4\19\0B\0\4\0016\0\n\0009\0\v\0009\0\f\0'\2\r\0'\3\20\0'\4\21\0B\0\4\0016\0\n\0009\0\v\0009\0\f\0'\2\r\0'\3\22\0'\4\23\0B\0\4\0016\0\n\0009\0\v\0009\0\f\0'\2\r\0'\3\24\0'\4\25\0B\0\4\1K\0\1\0\29:Gitsigns blame_line<CR>\agb\31:Gitsigns preview_hunk<CR>\agp\":Gitsigns undo_stage_hunk<CR>\agS\29:Gitsigns stage_hunk<CR>\ags\28:Gitsigns prev_hunk<CR>\a[h\28:Gitsigns next_hunk<CR>\a]h\6n\bset\vkeymap\bvim\nsigns\1\0\0\vchange\1\0\1\ttext\bâ¢•\badd\1\0\0\1\0\1\ttext\bâ¢•\nsetup\rgitsigns\frequire\0", "config", "gitsigns.nvim")
+time([[Config for gitsigns.nvim]], false)
 -- Load plugins in order defined by `after`
 time([[Sequenced loading]], true)
 vim.cmd [[ packadd bufferline.nvim ]]
