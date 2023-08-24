@@ -46,7 +46,7 @@ return require('packer').startup(function(use)
   use('tpope/vim-surround')
 
   -- Useful commands like :Rename and :SudoWrite.
-  -- use('tpope/vim-eunuch')
+  use('tpope/vim-eunuch')
 
   -- Pairs of handy bracket mappings, like [b and ]b.
   -- open brackets
@@ -59,16 +59,16 @@ return require('packer').startup(function(use)
   use('tpope/vim-repeat')
 
   -- Navigate seamlessly between Vim windows and Tmux panes.
-  -- use('christoomey/vim-tmux-navigator')
+  use('christoomey/vim-tmux-navigator')
 
   -- Jump to the last location when opening a file.
   use('farmergreg/vim-lastplace')
 
   -- Enable * searching with visually selected text.
-  -- use('nelstrom/vim-visual-star-search')
+  use('nelstrom/vim-visual-star-search')
 
   -- Automatically create parent dirs when saving.
-  -- use('jessarcher/vim-heritage')
+  use('jessarcher/vim-heritage')
 
 -- File tree sidebar
 use({
@@ -99,6 +99,14 @@ use({
   config = function()
     require('ketchlabs/plugins/bufferline')
   end,
+})
+
+-- Add a dashboard.
+use({
+  'glepnir/dashboard-nvim',
+  config = function()
+    require('ketchlabs/plugins/dashboard-nvim')
+  end
 })
 
   -- Automatically set the working directory to the project root.

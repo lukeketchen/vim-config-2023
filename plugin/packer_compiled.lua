@@ -92,6 +92,12 @@ _G.packer_plugins = {
     path = "/Users/lukeketchen/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp",
     url = "https://github.com/hrsh7th/cmp-nvim-lsp"
   },
+  ["dashboard-nvim"] = {
+    config = { "\27LJ\2\n@\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0%ketchlabs/plugins/dashboard-nvim\frequire\0" },
+    loaded = true,
+    path = "/Users/lukeketchen/.local/share/nvim/site/pack/packer/start/dashboard-nvim",
+    url = "https://github.com/glepnir/dashboard-nvim"
+  },
   harpoon = {
     loaded = true,
     path = "/Users/lukeketchen/.local/share/nvim/site/pack/packer/start/harpoon",
@@ -199,10 +205,20 @@ _G.packer_plugins = {
     path = "/Users/lukeketchen/.local/share/nvim/site/pack/packer/start/vim-commentary",
     url = "https://github.com/tpope/vim-commentary"
   },
+  ["vim-eunuch"] = {
+    loaded = true,
+    path = "/Users/lukeketchen/.local/share/nvim/site/pack/packer/start/vim-eunuch",
+    url = "https://github.com/tpope/vim-eunuch"
+  },
   ["vim-fugitive"] = {
     loaded = true,
     path = "/Users/lukeketchen/.local/share/nvim/site/pack/packer/start/vim-fugitive",
     url = "https://github.com/tpope/vim-fugitive"
+  },
+  ["vim-heritage"] = {
+    loaded = true,
+    path = "/Users/lukeketchen/.local/share/nvim/site/pack/packer/start/vim-heritage",
+    url = "https://github.com/jessarcher/vim-heritage"
   },
   ["vim-lastplace"] = {
     loaded = true,
@@ -237,10 +253,20 @@ _G.packer_plugins = {
     path = "/Users/lukeketchen/.local/share/nvim/site/pack/packer/start/vim-surround",
     url = "https://github.com/tpope/vim-surround"
   },
+  ["vim-tmux-navigator"] = {
+    loaded = true,
+    path = "/Users/lukeketchen/.local/share/nvim/site/pack/packer/start/vim-tmux-navigator",
+    url = "https://github.com/christoomey/vim-tmux-navigator"
+  },
   ["vim-unimpaired"] = {
     loaded = true,
     path = "/Users/lukeketchen/.local/share/nvim/site/pack/packer/start/vim-unimpaired",
     url = "https://github.com/tpope/vim-unimpaired"
+  },
+  ["vim-visual-star-search"] = {
+    loaded = true,
+    path = "/Users/lukeketchen/.local/share/nvim/site/pack/packer/start/vim-visual-star-search",
+    url = "https://github.com/nelstrom/vim-visual-star-search"
   }
 }
 
@@ -252,10 +278,10 @@ time([[Setup for vim-rooter]], false)
 time([[packadd for vim-rooter]], true)
 vim.cmd [[packadd vim-rooter]]
 time([[packadd for vim-rooter]], false)
--- Config for: lualine.nvim
-time([[Config for lualine.nvim]], true)
-try_loadstring("\27LJ\2\n9\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\30ketchlabs/plugins/lualine\frequire\0", "config", "lualine.nvim")
-time([[Config for lualine.nvim]], false)
+-- Config for: vim-pasta
+time([[Config for vim-pasta]], true)
+try_loadstring("\27LJ\2\nG\0\0\2\0\4\0\0056\0\0\0009\0\1\0005\1\3\0=\1\2\0K\0\1\0\1\2\0\0\rfugitive\29pasta_disabled_filetypes\6g\bvim\0", "config", "vim-pasta")
+time([[Config for vim-pasta]], false)
 -- Config for: nvim-autopairs
 time([[Config for nvim-autopairs]], true)
 try_loadstring("\27LJ\2\n<\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\19nvim-autopairs\frequire\0", "config", "nvim-autopairs")
@@ -264,18 +290,22 @@ time([[Config for nvim-autopairs]], false)
 time([[Config for vim-commentary]], true)
 try_loadstring("\27LJ\2\nZ\0\0\5\0\6\0\b6\0\0\0009\0\1\0009\0\2\0'\2\3\0'\3\4\0'\4\5\0B\0\4\1K\0\1\0!my<cmd>norm vip<bar>gc<cr>`y\tgcap\6n\bset\vkeymap\bvim\0", "config", "vim-commentary")
 time([[Config for vim-commentary]], false)
+-- Config for: lualine.nvim
+time([[Config for lualine.nvim]], true)
+try_loadstring("\27LJ\2\n9\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\30ketchlabs/plugins/lualine\frequire\0", "config", "lualine.nvim")
+time([[Config for lualine.nvim]], false)
 -- Config for: vim-rooter
 time([[Config for vim-rooter]], true)
 try_loadstring("\27LJ\2\n*\0\0\3\0\3\0\0056\0\0\0009\0\1\0'\2\2\0B\0\2\1K\0\1\0\vRooter\bcmd\bvim\0", "config", "vim-rooter")
 time([[Config for vim-rooter]], false)
--- Config for: vim-pasta
-time([[Config for vim-pasta]], true)
-try_loadstring("\27LJ\2\nG\0\0\2\0\4\0\0056\0\0\0009\0\1\0005\1\3\0=\1\2\0K\0\1\0\1\2\0\0\rfugitive\29pasta_disabled_filetypes\6g\bvim\0", "config", "vim-pasta")
-time([[Config for vim-pasta]], false)
 -- Config for: onedark.vim
 time([[Config for onedark.vim]], true)
 try_loadstring("\27LJ\2\nû\1\0\0\t\0\14\0\0286\0\0\0009\0\1\0'\2\2\0B\0\2\0016\0\0\0009\0\3\0009\0\4\0)\2\0\0'\3\5\0005\4\t\0006\5\0\0009\5\3\0059\5\6\5'\a\a\0+\b\2\0B\5\3\0029\5\b\5=\5\n\0046\5\0\0009\5\3\0059\5\6\5'\a\v\0+\b\2\0B\5\3\0029\5\f\5=\5\r\4B\0\4\1K\0\1\0\abg\15background\15StatusLine\afg\1\0\0\15foreground\fNonText\24nvim_get_hl_by_name\22StatusLineNonText\16nvim_set_hl\bapi\24colorscheme onedark\bcmd\bvim\0", "config", "onedark.vim")
 time([[Config for onedark.vim]], false)
+-- Config for: dashboard-nvim
+time([[Config for dashboard-nvim]], true)
+try_loadstring("\27LJ\2\n@\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0%ketchlabs/plugins/dashboard-nvim\frequire\0", "config", "dashboard-nvim")
+time([[Config for dashboard-nvim]], false)
 -- Config for: nvim-tree.lua
 time([[Config for nvim-tree.lua]], true)
 try_loadstring("\27LJ\2\n;\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0 ketchlabs/plugins/nvim-tree\frequire\0", "config", "nvim-tree.lua")
