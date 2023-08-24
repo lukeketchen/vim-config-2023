@@ -8,5 +8,5 @@ function ColorNvim(color)
 
 end
 
-ColorNvim()
+-- ColorNvim()
 

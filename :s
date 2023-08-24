@@ -12,7 +12,7 @@ return require('packer').startup(function(use)
     config = function()
       vim.cmd('colorscheme onedark')
 
-      vim.api.nvim_set_hl(0, 'StatusLineNonText', {
+      Vim.api.nvim_set_hl(0, 'StatusLineNonText', {
         fg = vim.api.nvim_get_hl_by_name('NonText', true).foreground,
         bg = vim.api.nvim_get_hl_by_name('StatusLine', true).background,
       })
@@ -50,7 +50,7 @@ return require('packer').startup(function(use)
 
   -- Pairs of handy bracket mappings, like [b and ]b.
   -- open brackets
-  use('tpope/vim-unimpaired')
+  -- use('tpope/vim-unimpaired')
 
   -- Indent autodetection with editorconfig support.
   use('tpope/vim-sleuth')
@@ -90,16 +90,6 @@ use {
     require('ketchlabs/plugins/lualine')
   end,
 }
-
--- Display buffers as tabs.
-use({
-  'akinsho/bufferline.nvim',
-  requires = 'kyazdani42/nvim-web-devicons',
-  after = 'onedark.vim',
-  config = function()
-    require('ketchlabs/plugins/bufferline')
-  end,
-})
 
   -- Automatically set the working directory to the project root.
   use({

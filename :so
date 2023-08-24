@@ -11,13 +11,6 @@ return require('packer').startup(function(use)
     'lukeketchen/onedark.vim',
     config = function()
       vim.cmd('colorscheme onedark')
-
-      vim.api.nvim_set_hl(0, 'StatusLineNonText', {
-        fg = vim.api.nvim_get_hl_by_name('NonText', true).foreground,
-        bg = vim.api.nvim_get_hl_by_name('StatusLine', true).background,
-      })
-
-
     end,
   })
 
@@ -50,7 +43,7 @@ return require('packer').startup(function(use)
 
   -- Pairs of handy bracket mappings, like [b and ]b.
   -- open brackets
-  use('tpope/vim-unimpaired')
+  -- use('tpope/vim-unimpaired')
 
   -- Indent autodetection with editorconfig support.
   use('tpope/vim-sleuth')
@@ -75,29 +68,7 @@ use({
   'kyazdani42/nvim-tree.lua',
   requires = 'kyazdani42/nvim-web-devicons',
   config = function()
-    require('ketchlabs/plugins/nvim-tree')
-  end,
-})
-
--- A Status line.
-use {
-  'nvim-lualine/lualine.nvim',
-  requires = {
-    'kyazdani42/nvim-web-devicons', 
-    'arkav/lualine-lsp-progress'
-  },
-  config = function()
-    require('ketchlabs/plugins/lualine')
-  end,
-}
-
--- Display buffers as tabs.
-use({
-  'akinsho/bufferline.nvim',
-  requires = 'kyazdani42/nvim-web-devicons',
-  after = 'onedark.vim',
-  config = function()
-    require('ketchlabs/plugins/bufferline')
+    require('lua/ketchlabs/plugins/nvim-tree')
   end,
 })
 
