@@ -171,24 +171,74 @@ use({
   requires = 'tpope/vim-rhubarb',
 })
 
-  use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})  
+-- Improved syntax highlighting
+use({
+  'nvim-treesitter/nvim-treesitter',
+  run = function()
+    require('nvim-treesitter.install').update({ with_sync = true })
+  end,
+  requires = {
+    'nvim-treesitter/playground',
+    'JoosepAlviste/nvim-ts-context-commentstring',
+    'nvim-treesitter/nvim-treesitter-textobjects',
+  },
+  config = function()
+    require('ketchlabs/plugins/treesitter')
+  end,
+})
+
   use('theprimeagen/harpoon')
   use('mbbill/undotree')
 
-  use {
-    'VonHeikemen/lsp-zero.nvim',
-    branch = 'v2.x',
-    requires = {
-      -- LSP Support
-      {'neovim/nvim-lspconfig'},             -- Required
-      {'williamboman/mason.nvim'},           -- Optional
-      {'williamboman/mason-lspconfig.nvim'}, -- Optional
+  -- Language Server Protocol.
+use({
+  'neovim/nvim-lspconfig',
+  requires = {
+    'williamboman/mason.nvim',
+    'williamboman/mason-lspconfig.nvim',
+    'b0o/schemastore.nvim',
+    'jose-elias-alvarez/null-ls.nvim',
+    'jayp0521/mason-null-ls.nvim',
+  },
+  config = function()
+    require('ketchlabs/plugins/lspconfig')
+  end,
+})
 
-      -- Autocompletion
-      {'hrsh7th/nvim-cmp'},     -- Required
-      {'hrsh7th/cmp-nvim-lsp'}, -- Required
-      {'L3MON4D3/LuaSnip'},     -- Required
-    }
-  }
+-- Completion
+use({
+  'hrsh7th/nvim-cmp',
+  requires = {
+    'hrsh7th/cmp-nvim-lsp',
+    'hrsh7th/cmp-nvim-lsp-signature-help',
+    'hrsh7th/cmp-buffer',
+    'hrsh7th/cmp-path',
+    -- 'hrsh7th/cmp-copilot',
+    'L3MON4D3/LuaSnip',
+    'saadparwaiz1/cmp_luasnip',
+    'onsails/lspkind-nvim',
+  },
+  config = function()
+    require('ketchlabs/plugins/cmp')
+  end,
+})
+
+-- PHP Refactoring Tools
+use({
+  'phpactor/phpactor',
+  ft = 'php',
+  run = 'composer install --no-dev --optimize-autoloader',
+  config = function()
+    vim.keymap.set('n', '<Leader>pm', ':PhpactorContextMenu<CR>')
+  end,
+})
+
+  -- Testing helper
+use({
+  'vim-test/vim-test',
+  config = function()
+    require('ketchlabs/plugins/vim-test')
+  end,
+})
 
 end)
