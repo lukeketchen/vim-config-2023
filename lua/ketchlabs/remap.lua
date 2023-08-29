@@ -50,6 +50,11 @@ vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
 -- vim.keymap.set('v', '<A-j>', ":move '>+1<CR>gv=gv")
 -- vim.keymap.set('v', '<A-k>', ":move '<-2<CR>gv=gv")
 
+-- Add ctl s as save
+vim.keymap.set("n", "<C-S>", ":update>CR>")
+vim.keymap.set("v", "<C-S>", "<C-C>:update<CR>")
+vim.keymap.set("i", "<C-S>", "<C-O>:update<CR>")
+
 vim.keymap.set("n", "<leader><leader>", function()
     vim.cmd("so")
 end)
